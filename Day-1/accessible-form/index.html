@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible-form</title>
+</head>
+<body>
+    <main>
+        <form aria-labelledby="form-title">
+            <h1 id="form-title">Application Form</h1>
+            <fieldset>
+                <legend>Step 1: Personal Information</legend>
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" aria-required="true" required />
+                <label for="email">Email Id</label>
+                <input type="email" id="email" name="email" aria-required="true" required/>
+            </fieldset>
+            <fieldset>
+                <legend>Step 2: Resume & Other Details</legend>
+                <label for="resume">Upload Resume</label>
+                <input type="file" id="resume" name="resume" aria-describedby="resume-desc"/>
+                <span id="resume-desc">Only PDF allowed(max 2MB)</span>
+
+                <label for="position">Mention Position applying for</label>
+                <select name="position" id="position">
+                    <option value="frontend">Frontend Developer</option>
+                    <option value="fullstack">Full Stack Developer</option>
+                    <option value="qa">Quality Analyst</option>
+                </select>
+            </fieldset>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

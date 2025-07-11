@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard</title>
+    <meta
+      name="description"
+      content="Accessible and semantic HTML5 user dashboard"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #f4f6f8;
+        color: #222;
+        padding: 20px;
+      }
+
+      header {
+        background-color: #0a66c2;
+        color: white;
+        padding: 24px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      nav {
+        margin-bottom: 30px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #0a66c2;
+        font-weight: 500;
+        font-size: 1rem;
+        position: relative;
+        padding: 4px 0;
+      }
+
+      nav a[aria-current="page"] {
+        color: #06376c;
+        font-weight: 600;
+        border-bottom: 2px solid #06376c;
+      }
+
+      nav a:focus {
+        outline: 2px solid #0a66c2;
+        outline-offset: 3px;
+      }
+
+      main,
+      section,
+      aside {
+        margin-bottom: 20px;
+      }
+
+      section,
+      aside {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+      }
+
+      section h2,
+      aside h2 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+        color: #222;
+      }
+
+      section ul,
+      aside ul {
+        list-style: disc inside;
+        margin-top: 10px;
+      }
+
+      button {
+        padding: 10px 18px;
+        margin-right: 12px;
+        background-color: #0a66c2;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover,
+      button:focus {
+        background-color: #06376c;
+      }
+
+      button:focus {
+        outline: 3px dashed #06376c;
+        outline-offset: 3px;
+      }
+
+      footer {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #777;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <header role="banner">
+      <h1>User Dashboard</h1>
+      <p>Welcome back <strong>User</strong></p>
+    </header>
+
+    <nav role="navigation" aria-label="Dashboard Navigation">
+      <ul>
+        <li><a href="#" aria-current="page">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Tasks</a></li>
+        <li><a href="#">Messages</a></li>
+        <li class="logout"><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+
+    <main role="main">
+      <section aria-labelledby="profile-heading">
+        <h2 id="profile-heading">User Profile</h2>
+        <p><strong>Name:</strong> Kavya</p>
+        <p><strong>Email:</strong> kavya@example.com</p>
+        <p><strong>Role:</strong> Student</p>
+        <p><strong>Major:</strong> Computer Science</p>
+      </section>
+    </main>
+
+    <section aria-labelledby="tasks-heading">
+      <h2 id="tasks-heading">Tasks</h2>
+      <ul>
+        <li>Attend DSA lectures.</li>
+        <li>Complete OS Assignment</li>
+        <li>Prepare for Algorithms quiz</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="activity-heading">
+      <h2 id="activity-heading">All Recent Activity</h2>
+      <ul>
+        <li>Submitted Web dev Assignment</li>
+        <li>Received feedback on English essay</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="events-heading">
+      <h2 id="events-heading">Upcoming Events</h2>
+      <ul>
+        <li>Frontend Workshop-Friday 5PM</li>
+        <li>Java Sessions-Tuesday 4PM</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="quick-actions-heading">
+      <h2 id="quick-actions-heading">Quick Actions</h2>
+      <button type="button" aria-label="Join new course">Join Course</button>
+      <button type="button" aria-label="Submit Assignment">
+        Submit Assignment
+      </button>
+    </section>
+
+    <aside role="complementary" aria-labelledby="notifications-heading">
+      <h2 id="notifications-heading">Notifications</h2>
+      <ul>
+        <li>Library Fine due alert</li>
+        <li>Group meeting scheduled for 3 PM</li>
+      </ul>
+    </aside>
+
+    <footer role="contentinfo">
+      <p>&copy; 2025 Student Portal. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
