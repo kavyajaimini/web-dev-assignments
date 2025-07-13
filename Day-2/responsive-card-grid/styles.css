@@ -38,6 +38,9 @@ header p {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .card:hover {
   transform: translateY(-6px);
@@ -51,8 +54,13 @@ header p {
 }
 
 .card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: 1rem;
+  justify-content: space-between;
 }
+
 
 .card-content h3 {
   font-size: 1.2rem;
@@ -74,6 +82,7 @@ header p {
 }
 
 .card-content button {
+  margin-top: auto;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -89,6 +98,7 @@ header p {
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease, transform 0.1s ease;
+  
 }
 
 .card-content button:hover {
@@ -97,4 +107,7 @@ header p {
 
 .card-content button:active {
   transform: scale(0.98);
+}
+.card-content button {
+  margin-top: auto;
 }
