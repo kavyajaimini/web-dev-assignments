@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle" />
+    <label for="sidebar-toggle" class="toggle-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+
+    <div class="dashboard">
+      <aside class="sidebar">
+        <h2 class="logo">EduWeb</h2>
+        <nav>
+          <ul>
+            <li>
+              <a href="#"><i class="fas fa-user-graduate"></i>Dashboard</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-book-open"></i>My Courses</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-tasks"></i>My Assignments</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-chart-line"></i>Progress</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-envelope"></i>Messages</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div class="main">
+        <header class="header">
+          <div class="welcome">Hey, <strong>User</strong></div>
+          <div class="user"></div>
+        </header>
+
+        <section class="content">
+          <div class="card">
+            <h3>Active Courses</h3>
+            <p>2</p>
+            <span><i class="fas fa-book-open"></i></span>
+          </div>
+
+          <div class="card">
+            <h3>Assignments Due</h3>
+            <p>2</p>
+            <span><i class="fas fa-tasks"></i></span>
+          </div>
+
+          <div class="card">
+            <h3>Attendance</h3>
+            <p>92%</p>
+            <span><i class="fas fa-calendar-check"></i></span>
+          </div>
+
+          <div class="card">
+            <h3>GPA</h3>
+            <p>8.0</p>
+            <span><i class="fas fa-graduation-cap"></i></span>
+          </div>
+        </section>
+
+        <section class="extra-content">
+          <div class="summary-box">
+            <h2>Welcome back, User!</h2>
+            <p>
+              Don't forget to complete your assignments timely and revise
+              upcoming lessons.
+            </p>
+          </div>
+
+          <div class="schedule-table">
+            <h3>Today’s Classes</h3>
+            <table>
+              <tr>
+                <th>Time</th>
+                <th>Subject</th>
+                <th>Instructor</th>
+              </tr>
+              <tr>
+                <td>9:00 AM</td>
+                <td>Data Structures</td>
+                <td>Prof.Mehta</td>
+              </tr>
+              <tr>
+                <td>11:00 AM</td>
+                <td>Operating Systems</td>
+                <td>Dr.RK Singh</td>
+              </tr>
+              <tr>
+                <td>2:00 PM</td>
+                <td>DBMS</td>
+                <td>Ms.Richa</td>
+              </tr>
+            </table>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <p>&copy; 2025 EduWeb</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

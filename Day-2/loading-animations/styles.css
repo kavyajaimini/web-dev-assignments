@@ -1,0 +1,144 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.7rem 1.2rem;
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
+}
+
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 1000;
+}
+.modal:target {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #888;
+}
+.close-btn:hover {
+  color: #000;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  margin: 2rem auto 0;
+}
+
+
+.spinner-1 {
+  border: 6px solid #eee;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+
+.spinner-2 {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+.spinner-2::before,
+.spinner-2::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: blueviolet;
+  border-radius: 50%;
+  animation: bounce 0.6s infinite alternate;
+}
+.spinner-2::after {
+  left: 30%;
+  animation-delay: 0.3s;
+}
+
+
+.spinner-3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60px;
+  margin: 2rem auto 0;
+}
+.spinner-3 span {
+  width: 12px;
+  height: 12px;
+  background: turquoise;
+  border-radius: 50%;
+  animation: pulse 0.9s ease-in-out infinite;
+}
+.spinner-3 span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.spinner-3 span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.4); opacity: 1; }
+}
