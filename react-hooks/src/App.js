@@ -32,7 +32,6 @@ function App() {
         return <Fetch />;
       case "Counter":
         return <Counter />;
-
       default:
         return <LocalStorage />;
     }
@@ -40,35 +39,35 @@ function App() {
 
   return (
     <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
-      <h1>React-Hooks</h1>
-      <div>
-        {[
-          "LocalStorage",
-          "Debounce",
-          "Fetch",
-          "Counter",
-          "Previous",
-          "Toggle",
-        ].map((demo) => (
+      <h1 style={{ textAlign: "center", marginBottom: "30px", color: "#3b4cccff" }}>
+        React-Hooks
+      </h1>
+      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", marginBottom: "20px" }}>
+        {comp.map((demo) => (
           <button
             key={demo}
             onClick={() => setActive(demo)}
             style={{
-              marginRight: '10px',
-              padding: '8px 12px',
-              backgroundColor: active === demo ? '#3b4cccff' : '#f0f0f0',
-              border: '1px solid #ccc',
-              borderRadius: "4px",
-              color : active === demo ? 'white' : 'black',
-              cursor : 'pointer',
+              margin: "8px",
+              padding: "10px 16px",
+              backgroundColor: active === demo ? "#3b4cccff" : "#ffffff",
+              color: active === demo ? "white" : "#3b4cccff",
+              border: "2px solid #3b4cccff",
+              borderRadius: "8px",
+              fontWeight: "bold",
+              fontSize: "14px",
+              transition: "all 0.2s ease-in-out",
+              cursor: "pointer",
+              boxShadow: active === demo ? "0 4px 10px rgba(0,0,0,0.1)" : "none",
             }}
           >
             {demo}
           </button>
         ))}
       </div>
-      <div>{renderComp()}</div>
+      <div style={{ marginTop: "20px" }}>{renderComp()}</div>
     </div>
   );
 }
+
 export default App;
