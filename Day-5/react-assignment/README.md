@@ -1,12 +1,38 @@
-# React + Vite
+Day 5 Tasks
+ReactFeatureBoard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A mini React dashboard showcasing multiple reusable components and advanced React patterns. This project demonstrates core concepts like custom hooks, reusable components, state management, and user-friendly UI design.
 
-Currently, two official plugins are available:
+--->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+### Modal Component
+- Reusable and accessible modal dialog
+- Built with **React Portals** for DOM separation
+- Includes focus trap and background click to close
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ ### InfiniteScroll Component
+- Dynamically loads content as user scrolls
+- Uses **Intersection Observer API** for performance
+- Ideal for long lists or feed-like data
+
+### Accordion Component
+- Simple and accessible collapsible sections
+- Ideal for FAQs or grouped content
+- Controlled expand/collapse using state
+
+### AutoComplete Component
+- Search input with suggestion dropdown
+- Fetches live product data from an external API
+- Implements filtering and real-time updates
+  
+  I learnt
+  React Patterns like:
+  - Custom Hooks
+  - Controlled vs Uncontrolled Components
+  - Compound Components
+  - Portals
+  - Code Splitting
+- Async state management using useEffect and useState.
+- Reusability, separation of concerns, and performance optimization.

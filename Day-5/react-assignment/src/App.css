@@ -40,3 +40,59 @@
 .read-the-docs {
   color: #888;
 }
+
+.app-container {
+  padding: 2rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.open-modal-btn {
+  padding: 12px 25px;
+  margin-top: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: turquoise;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.open-modal-btn:hover {
+  background-color: #1de9b6;
+}
+
+.autocomplete-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.infinite-scroll-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.product-list {
+  list-style: none;
+  padding: 0;
+}
+
+.product-item {
+  border: 1px solid #eee;
+  margin: 10px 0;
+  padding: 16px;
+  border-radius: 8px;
+  background: #fafafa;
+  text-align: left;
+}
+
+.product-desc {
+  font-size: 0.9rem;
+  color: #666;
+}
