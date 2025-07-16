@@ -1,20 +1,18 @@
 Day 5 Tasks
 ReactFeatureBoard
 
-A mini React dashboard showcasing multiple reusable components and advanced React patterns. This project demonstrates core concepts like custom hooks, reusable components, state management, and user-friendly UI design.
+A mini React dashboard showcasing multiple reusable components and advanced React patterns.
 
---->
-
-## 🚀 Features
+--->Features
 
 ### Modal Component
 - Reusable and accessible modal dialog
-- Built with **React Portals** for DOM separation
+- Built with React Portals for DOM separation
 - Includes focus trap and background click to close
 
  ### InfiniteScroll Component
 - Dynamically loads content as user scrolls
-- Uses **Intersection Observer API** for performance
+- Uses Intersection Observer API for performance
 - Ideal for long lists or feed-like data
 
 ### Accordion Component
@@ -27,7 +25,7 @@ A mini React dashboard showcasing multiple reusable components and advanced Reac
 - Fetches live product data from an external API
 - Implements filtering and real-time updates
   
-  I learnt
+  I learnt--->
   React Patterns like:
   - Custom Hooks
   - Controlled vs Uncontrolled Components
