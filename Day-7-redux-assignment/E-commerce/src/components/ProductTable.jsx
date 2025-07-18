@@ -1,17 +1,32 @@
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import VirtualList from "./VirtualList.jsx";
-import { useDispatch } from "react-redux";
 
 export default function ProductTable({ products }) {
-  const items = Array.isArray(products) ? products : [];
   const dispatch = useDispatch();
+  const currentTenant = useSelector((state) => state.user.tenant);
+
+  const items = Array.isArray(products) ? products : [];
+
+  // 🔍 Filter products based on tenant
+  const filteredItems = items.filter((p) => {
+    return p.tenant === currentTenant;
+  });
+
+  console.log("Current Tenant:", currentTenant);
+  console.log("Filtered Items:", filteredItems);
+
   const changeStock = (id, diff, curr) => {
     const stock = Math.max(0, curr + diff);
     dispatch({ type: "products/updateStock", payload: { id, stock } });
   };
+
   return (
     <div className="product-table-container">
       <div className="product-table-header">
-        <span className="product-total">Total: {items.length}</span>
+        <span className="product-total">
+          Showing {filteredItems.length} items for tenant: <b>{currentTenant}</b>
+        </span>
       </div>
       <div className="product-table-flex">
         <div className="product-table-row product-table-head">
@@ -22,7 +37,7 @@ export default function ProductTable({ products }) {
           <div>Stock</div>
         </div>
         <VirtualList
-          items={items}
+          items={filteredItems}
           rowHeight={44}
           height={600}
           renderRow={(p) => (

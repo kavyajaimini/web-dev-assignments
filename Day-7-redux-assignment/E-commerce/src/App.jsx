@@ -47,15 +47,12 @@ export default function App() {
               <NavLink to="/products" style={linkStyle}>
                 Products
               </NavLink>
-              <NavLink to="/orders" style={linkStyle}>
-                Orders
-              </NavLink>
             </div>
           </nav>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/orders" element={<Orders />} />
+            {/* <Route path="/orders" element={<Orders />} /> */}
           </Routes>
         </div>
       </BrowserRouter>

@@ -34,9 +34,11 @@ const categories = [
 ];
 
 function generateDummyProducts(count = 10000) {
+  const tenants = ["default", "storeA", "storeB", "storeC"];
   const products = [];
   for (let i = 1; i <= count; i++) {
     const cat = categories[i % categories.length];
+    const tenant = tenants[i % tenants.length];
     products.push({
       id: i,
       name: `${cat} Product ${i}`,
@@ -45,6 +47,7 @@ function generateDummyProducts(count = 10000) {
       stock: Math.floor(Math.random() * 1000),
       updated: Date.now() - Math.floor(Math.random() * 1e7),
       img: categoryImages[cat],
+      tenant: tenant,
     });
   }
   return products;
