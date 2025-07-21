@@ -2,6 +2,11 @@
 # Employee Onboarding App
 
 This is a friendly web app that helps new employees get started and lets HR manage the onboarding process—all in your browser.
+To log in:
+
+- **HR users** must start their username with `hr` (e.g., `hrkavya`, `hrjohn`)
+- **Employees** must start their username with `employee` (e.g., `employeeamit`, `employeeanita`)
+- **Password** must be at least **4 characters** long for all users.
 
 ## What can you do here?
 
