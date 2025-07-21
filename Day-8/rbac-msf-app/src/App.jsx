@@ -49,7 +49,6 @@ function Navbar() {
     </header>
   );
 }
-// Protects all routes except /login
 import { useLocation } from 'react-router-dom';
 function AuthGuard({ children }) {
   const { user } = useAuth();
